@@ -6,6 +6,12 @@ dagobah:
   build: .
   dockerfile: Dockerfiles/dagobah/Dockerfile
   links:
-    - worker:spark_submit
+    - worker
   ports:
     - 9000:9000
+
+job-seeder:
+  build: .
+  dockerfile: Dockerfiles/job_seeder/Dockerfile
+  links:
+    - dagobah

@@ -23,7 +23,7 @@
     }],
   "job_id": 1,
   "notes": null,
-  "name": "My Job",
+  "name": "My Job 2",
   "parent_id": 1,
   "dependencies": {
     "My task": ["Say Hello"],
