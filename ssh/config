@@ -1,0 +1,6 @@
+Host spark_submit
+    HostName spark_submit
+    User root
+    IdentityFile /root/.ssh/id_rsa
+    StrictHostKeyChecking no
+    UserKnownHostsFile=/dev/null

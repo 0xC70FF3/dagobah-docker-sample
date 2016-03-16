@@ -1,0 +1,33 @@
+{
+  "status": "waiting",
+  "next_run": null,
+  "tasks": [
+    {
+      "soft_timeout": 0,
+      "name": "My task",
+      "success": null,
+      "hard_timeout": 0,
+      "hostname": null,
+      "completed_at": null,
+      "command": "date",
+      "started_at": null
+    }, {
+      "soft_timeout": 0,
+      "name": "Say Hello",
+      "success": null,
+      "hard_timeout": 0,
+      "hostname": null,
+      "completed_at": null,
+      "command": "echo \"Hello World!\"",
+      "started_at": null
+    }],
+  "job_id": 1,
+  "notes": null,
+  "name": "My Job",
+  "parent_id": 1,
+  "dependencies": {
+    "My task": ["Say Hello"],
+    "Say Hello": []
+  },
+  "cron_schedule": null
+}

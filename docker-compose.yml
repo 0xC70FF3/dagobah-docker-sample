@@ -1,0 +1,11 @@
+worker:
+  build: .
+  dockerfile: Dockerfiles/worker/Dockerfile
+
+dagobah:
+  build: .
+  dockerfile: Dockerfiles/dagobah/Dockerfile
+  links:
+    - worker:spark_submit
+  ports:
+    - 9000:9000
