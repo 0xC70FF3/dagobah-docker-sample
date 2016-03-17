@@ -1,33 +1,18 @@
 {
-  "status": "waiting",
-  "next_run": null,
-  "tasks": [
-    {
-      "soft_timeout": 0,
-      "name": "My task",
-      "success": null,
-      "hard_timeout": 0,
-      "hostname": null,
-      "completed_at": null,
-      "command": "date",
-      "started_at": null
+    "name": "My First Awesome Job Queue",
+    "tasks": [{
+        "name": "Do Something",
+        "command": "echo \"Then do something\""
     }, {
-      "soft_timeout": 0,
-      "name": "Say Hello",
-      "success": null,
-      "hard_timeout": 0,
-      "hostname": null,
-      "completed_at": null,
-      "command": "echo \"Hello World!\"",
-      "started_at": null
+        "name": "Wait a little...",
+        "command": "sleep 2"
+    }, {
+        "name": "Say Hello",
+        "command": "echo \"Hello World!\""
     }],
-  "job_id": 1,
-  "notes": null,
-  "name": "My Job 2",
-  "parent_id": 1,
-  "dependencies": {
-    "My task": ["Say Hello"],
-    "Say Hello": []
-  },
-  "cron_schedule": null
+    "dependencies": {
+        "Do Something": ["Wait a little..."],
+        "Wait a little...": ["Say Hello"],
+        "Say Hello": []
+    }
 }
